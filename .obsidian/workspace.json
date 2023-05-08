@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "8820f0f34f9a86dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "07f20d6141154621",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "14a7241948ce35e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ISA_add_insts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5fc9bcad2c1c5a6c",
+    "type": "split",
+    "children": [
+      {
+        "id": "9cec212f5bfe55f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "73f9bde64ff0ad01",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "59392580e868f6fb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9a39e30a436da402",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ced66b37fafbdf73",
+    "type": "split",
+    "children": [
+      {
+        "id": "7bb503d350dfb234",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90ef2789e04de904",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "ISA_add_insts.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e44dc6a4b7bc9fdc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "ISA_add_insts.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7613b933501b4b42",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "44222e4d5cf167bf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ISA_add_insts.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "14a7241948ce35e4",
+  "lastOpenFiles": [
+    "attachments/Pasted image 20230508170246.png",
+    "attachments/Pasted image 20230508165513.png",
+    "attachments/Pasted image 20230508165049.png",
+    "attachments/Pasted image 20230508165017.png",
+    "Pasted image 20230508164411.png",
+    "ISA_add_insts.md",
+    "attachments/Pasted image 20230508164924.png"
+  ]
+}
