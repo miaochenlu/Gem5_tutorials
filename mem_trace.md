@@ -1,5 +1,7 @@
 # Generate & Analysis Memory Trace
 
+You can see modified code at https://github.com/miaochenlu/gem5_explore/tree/mem-trace
+
 # 1. CommMonitor
 ## 1.1 CommMonitor Overview
 
@@ -39,7 +41,7 @@ void
 MemTraceProbe::handleRequest(const probing::PacketInfo &pkt_info)
 {
     ProtoMessage::Packet pkt_msg;
-    pkt_msg.set_tick(curTick());
+    pkt_msg.set_tick(curTick());
     pkt_msg.set_cmd(pkt_info.cmd.toInt());
     pkt_msg.set_flags(pkt_info.flags);
     pkt_msg.set_addr(pkt_info.addr);
