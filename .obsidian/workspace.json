@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "14a7241948ce35e4",
+            "id": "9f5b5f40e07afc9a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d9d05ab644af7094",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mem_trace.md",
                 "mode": "source",
                 "source": false
               }
@@ -62,6 +74,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "1a2b9d2dbd7366df",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -146,8 +166,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "14a7241948ce35e4",
+  "active": "9f5b5f40e07afc9a",
   "lastOpenFiles": [
+    "mem_trace.md",
+    "README.md",
+    "Prefetcher.md",
+    "attachments/Pasted image 20230523214750.png",
+    "attachments/Pasted image 20230523214510.png",
+    "attachments/Pasted image 20230523212052.png",
+    "attachments/Pasted image 20230523212048.png",
     "ISA_add_insts.md",
     "attachments/Pasted image 20230508170246.png",
     "attachments/Pasted image 20230508165513.png",

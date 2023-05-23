@@ -278,6 +278,7 @@ Source('cbo.cc', tags='riscv isa')
 ```
 ### a. Decode
 ![](attachments/Pasted%20image%2020230508170246.png)
+
 For simplicity, in `src/arch/riscv/isa/bitfields.isa`, add PFTYPE fields to figure out prefetch types: `prefetch.i` or `prefetch.r` or `prefetch.w`
 ```
 // Prefetch
@@ -363,25 +364,26 @@ Successfully generated prefetch instructions.
 ### b. Test Gem5
 use gdb
 add breakpoints
-* b `Prefetch_r::initiateAcc`
-* b `Prefetch_r::completeAcc`
+* `b Prefetch_r::initiateAcc`
+* `b Prefetch_r::completeAcc`
+
 ![](attachments/Pasted%20image%2020230508165513.png)
 
 ### c. Matrix Addition Test
 ```cpp
-#include <stdlib.h>
+#include <stdlib.h>
 #include <gem5/m5ops.h>
 const int MATRIX_SIZE = 100;
-int main() {
+int main() {
         int** matA = (int**)malloc(MATRIX_SIZE * sizeof(int*));
         int** matB = (int**)malloc(MATRIX_SIZE * sizeof(int*));
         int** matC = (int**)malloc(MATRIX_SIZE * sizeof(int*));
-        for(int i = 0; i < MATRIX_SIZE; i++) {
+        for(int i = 0; i < MATRIX_SIZE; i++) {
                 matA[i] = (int*)malloc(MATRIX_SIZE * sizeof(int));
                 matB[i] = (int*)malloc(MATRIX_SIZE * sizeof(int));
                 matC[i] = (int*)malloc(MATRIX_SIZE * sizeof(int));
         }
-m5_reset_stats(0, 0);
+m5_reset_stats(0, 0);
         for(int i = 0; i < MATRIX_SIZE; i++) {
                 for(int j = 0; j < MATRIX_SIZE; j++) {
                     asm volatile ("prefetch.r %[addr]": 
