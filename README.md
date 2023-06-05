@@ -4,7 +4,7 @@
 * [Add new Instructions in Gem5](ISA_add_insts.md)
 
 ## 2. CPU
-
+* [TraceCPU & Elastic Trace](tracecpu.md)
 ## 3. Memory
 
 ### 3.1 Prefetch

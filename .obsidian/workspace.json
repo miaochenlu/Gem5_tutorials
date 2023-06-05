@@ -20,6 +20,30 @@
             }
           },
           {
+            "id": "bb924bc9bce55277",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cf93ed4f050977ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tracecpu.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "d9d05ab644af7094",
             "type": "leaf",
             "state": {
@@ -31,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -105,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "mem_trace.md",
+                "file": "tracecpu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "mem_trace.md",
+                "file": "tracecpu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mem_trace.md"
+                "file": "tracecpu.md"
               }
             }
           }
@@ -166,21 +191,22 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9f5b5f40e07afc9a",
+  "active": "cf93ed4f050977ab",
   "lastOpenFiles": [
     "README.md",
+    "tracecpu.md",
     "mem_trace.md",
     "Prefetcher.md",
+    "attachments/Pasted image 20230605164701.png",
+    "attachments/Pasted image 20230605164657.png",
+    "attachments/Pasted image 20230605161828.png",
+    "attachments/Pasted image 20230605160642.png",
+    "attachments/Pasted image 20230605160628.png",
+    "attachments/Pasted image 20230605160605.png",
     "attachments/Pasted image 20230523214750.png",
     "attachments/Pasted image 20230523214510.png",
     "attachments/Pasted image 20230523212052.png",
     "attachments/Pasted image 20230523212048.png",
-    "ISA_add_insts.md",
-    "attachments/Pasted image 20230508170246.png",
-    "attachments/Pasted image 20230508165513.png",
-    "attachments/Pasted image 20230508165049.png",
-    "attachments/Pasted image 20230508165017.png",
-    "Pasted image 20230508164411.png",
-    "attachments/Pasted image 20230508164924.png"
+    "ISA_add_insts.md"
   ]
 }
