@@ -22,7 +22,7 @@ class L1_DCache(L1Cache):
 ```python
 class L2Cache(Cache):
     tag_latency = 2
-    data_latency = 4
+    data_latency = 13
     sequential_access = True
 
     # This is communication latency between l2 & l3
@@ -46,7 +46,7 @@ class L2Cache(Cache):
  class L3Cache(Cache):
     # aligned latency:
     tag_latency = 2
-    data_latency = 4
+    data_latency = 12
     sequential_access = True
     # This is L3 miss latency, which act as padding for memory controller
     response_latency = 112
@@ -78,7 +78,7 @@ To test cache latency through programmatic access, you can use the provided test
 
 ## 2.1 Gem5 Latency
 
-When you compile the program in the cachetest_i directory using the command make ARCH=riscv64-xs, it will generate the maprobe-riscv64-xs.bin binary file. Run this binary in fs mode.
+When you compile the program in the maprobe directory using the command make ARCH=riscv64-xs, it will generate the maprobe-riscv64-xs.bin binary file. Run this binary in fs mode.
 
 command line:
 ```shell
@@ -102,9 +102,10 @@ command line:
 * llc lat: 31
 ![](attachments/Pasted%20image%2020230707164754.png)
 
-# 3. Gem5代码分析Latency构成
+# 3. Analyzing the composition of Memory Latency through Gem5 code.
 
 ![](attachments/Pasted%20image%2020230613101614.png)
+
 ## 3.1. OPLat
 
 ```python
@@ -113,9 +114,10 @@ class ReadPort(FUDesc):
                OpDesc(opClass='FloatMemRead') ]
     count = 2
 ```
-这里将MemRead的opLat设置为2
 
-https://gem5-users.gem5.narkive.com/YU5VU2Oo/o3-timing 这里面有解释opLat
+Here, the opLat for MemRead is set to 2.
+
+In the provided link from the Gem5 users forum, there is an explanation of opLat. https://gem5-users.gem5.narkive.com/YU5VU2Oo/o3-timing 
 
 > My understanding is that issueLat is the minimum number of cycles you have to wait before scheduling an instruction of the same type on the FU. Specifically, if opLat is 6 and issueLat is 1, you have a pipelined unit with a latency of 6 cycles but you have a throughput of 1 op/cycle once the pipe is full.
 
@@ -154,7 +156,7 @@ const Cycles fillLatency;
 const Cycles responseLatency;
 ```
 
-另一个比较重要的参数
+Another important parameter
 ```cpp
 /**
  * Whether tags and data are accessed sequentially.
@@ -162,12 +164,12 @@ const Cycles responseLatency;
 const bool sequentialAccess;
 ```
 
-如果设置了sequantialAccess, 那么lat计算是lookupLatency+dataLatency
+If sequentialAccess is set to true, then the lat (latency) calculation is lookupLatency + dataLatency.
 
-如果sequentialAccess=false, 那么lat计算时只需要max(lookupLatency, dataLatency)
+If sequentialAccess is set to false, then the lat calculation is max(lookupLatency, dataLatency).
 
+During initialization, both lookupLatency and forwardLatency are set to tagLatency.
 
-在初始化的时候，lookupLatency和forwardLatency都被设置为tagLatency
 ```cpp
 BaseCache::BaseCache(const BaseCacheParams &p, unsigned blk_size)
     : ...
@@ -217,7 +219,7 @@ Tick xbar_delay = (frontendLatency + forwardLatency) * clockPeriod();
 calcPacketTiming(pkt, xbar_delay);
 ```
 
-在`calcPacketTiming`函数中，`xbar_delay`会被放入pkt的`headerDelay`
+In the `calcPacketTiming` function, the `xbar_delay` will be placed into the `headerDelay` of the packet.
 ```cpp
 Tick offset = clockEdge() - curTick();
 
@@ -226,7 +228,7 @@ Tick offset = clockEdge() - curTick();
 pkt->headerDelay += offset + header_delay;
 ```
 
-接下来会去snoop filter进行一次查找，需要记录snoopfilter的lookuplatency
+Next, a lookup will be performed in the snoop filter, and the lookup latency of the snoop filter needs to be recorded.
 ```cpp
 if (snoopFilter) {
 	// check with the snoop filter where to forward this packet
@@ -239,12 +241,12 @@ if (snoopFilter) {
 }
 ```
 
-将request发送出去
+Send the request out.
 ```cpp
 success = memSidePorts[mem_side_port_id]->sendTimingReq(pkt);
 ```
 
-pkt将xbar上需要的latency记录在headerDelay中，会在cache的recvTimingReq中进行计算
+The packet (`pkt`) records the required latency on the crossbar (`xbar`) in the `headerDelay`, which will be calculated in the `recvTimingReq` function of the cache.
 
 ### 3.3.3. recvTimingResp -- responseLatency
 
@@ -262,7 +264,6 @@ send out response
 // any outstanding header delay
 Tick latency = pkt->headerDelay;
 pkt->headerDelay = 0;
-cpuSidePorts[cpu_side_port_id]->schedTimingResp(pkt, curTick()
-									+ latency);
+cpuSidePorts[cpu_side_port_id]->schedTimingResp(pkt, curTick()+ latency);
 ```
 
