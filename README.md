@@ -7,10 +7,13 @@
 * [TraceCPU & Elastic Trace](tracecpu.md)
 ## 3. Memory
 
-### 3.1 Prefetch
+### 3.1 Memory Latency
+* [Memory Latency](cache_latency.md)
+
+### 3.2 Prefetch
 * [todo: Prefetcher Structure in Gem5](Prefetcher.md)
 
-### 3.2 Replacement Policy
+### 3.3 Replacement Policy
 
-### 3.3 Memory Trace
+### 3.4 Memory Trace
 * [ Generate & Analysis Memory Trace](mem_trace.md)
