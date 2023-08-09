@@ -74,7 +74,7 @@ class L2Cache(Cache):
 
 # 2. Cache Latency Test
 
-To test cache latency through programmatic access, you can use the provided test program from this GitHub repository: https://github.com/OpenXiangShan/nexus-am/tree/gem5_benchmark/apps/cachetest_i
+To test cache latency through programmatic access, you can use the provided test program from this GitHub repository: https://github.com/miaochenlu/nexus-am/tree/southlake/apps/maprobe
 
 ## 2.1 Gem5 Latency
 
