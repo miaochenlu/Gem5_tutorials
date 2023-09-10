@@ -44,6 +44,18 @@
             }
           },
           {
+            "id": "0fd1fedd35953645",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cache_repl_policy.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "d9d05ab644af7094",
             "type": "leaf",
             "state": {
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -114,7 +126,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "ced66b37fafbdf73",
@@ -130,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tracecpu.md",
+                "file": "cache_repl_policy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tracecpu.md",
+                "file": "cache_repl_policy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tracecpu.md"
+                "file": "cache_repl_policy.md"
               }
             }
           }
@@ -191,10 +204,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cf93ed4f050977ab",
+  "active": "0fd1fedd35953645",
   "lastOpenFiles": [
-    "README.md",
+    "attachments/Pasted image 20230910205713.png",
+    "attachments/Pasted image 20230910205700.png",
+    "attachments/Pasted image 20230910205019.png",
     "tracecpu.md",
+    "cache_repl_policy.md",
+    "attachments/Pasted image 20230910204252.png",
+    "README.md",
     "mem_trace.md",
     "Prefetcher.md",
     "attachments/Pasted image 20230605164701.png",
@@ -204,9 +222,6 @@
     "attachments/Pasted image 20230605160628.png",
     "attachments/Pasted image 20230605160605.png",
     "attachments/Pasted image 20230523214750.png",
-    "attachments/Pasted image 20230523214510.png",
-    "attachments/Pasted image 20230523212052.png",
-    "attachments/Pasted image 20230523212048.png",
     "ISA_add_insts.md"
   ]
 }
