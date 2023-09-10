@@ -14,6 +14,7 @@
 * [todo: Prefetcher Structure in Gem5](Prefetcher.md)
 
 ### 3.3 Replacement Policy
+* [Cache Replacement Policies](cache_repl_policy.md)
 
 ### 3.4 Memory Trace
 * [ Generate & Analysis Memory Trace](mem_trace.md)
