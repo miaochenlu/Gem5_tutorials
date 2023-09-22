@@ -11,7 +11,7 @@
 * [Memory Latency](cache_latency.md)
 
 ### 3.2 Prefetch
-* [todo: Prefetcher Structure in Gem5](Prefetcher.md)
+* [Prefetcher Structure in Gem5](Prefetcher.md)
 
 ### 3.3 Replacement Policy
 * [Cache Replacement Policies](cache_repl_policy.md)

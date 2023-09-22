@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cache_repl_policy.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,8 +126,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "ced66b37fafbdf73",
@@ -143,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "cache_repl_policy.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "cache_repl_policy.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +182,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "cache_repl_policy.md"
+                "file": "README.md"
+              }
+            }
+          },
+          {
+            "id": "4cc6639f8d0fc950",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -206,22 +215,21 @@
   },
   "active": "0fd1fedd35953645",
   "lastOpenFiles": [
+    "Prefetcher.md",
+    "attachments/ampm-gem5_prefetcher.drawio (1).png",
+    "mem_trace.md",
+    "cache_repl_policy.md",
     "attachments/Pasted image 20230910205713.png",
     "attachments/Pasted image 20230910205700.png",
     "attachments/Pasted image 20230910205019.png",
     "tracecpu.md",
-    "cache_repl_policy.md",
     "attachments/Pasted image 20230910204252.png",
     "README.md",
-    "mem_trace.md",
-    "Prefetcher.md",
     "attachments/Pasted image 20230605164701.png",
     "attachments/Pasted image 20230605164657.png",
     "attachments/Pasted image 20230605161828.png",
     "attachments/Pasted image 20230605160642.png",
     "attachments/Pasted image 20230605160628.png",
-    "attachments/Pasted image 20230605160605.png",
-    "attachments/Pasted image 20230523214750.png",
     "ISA_add_insts.md"
   ]
 }
