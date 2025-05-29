@@ -19,5 +19,5 @@
 ### 3.4 Memory Trace
 * [ Generate & Analysis Memory Trace](mem_trace.md)
 
-## Tools
+## 4. Tools
 * [Add M5ops](add_m5op.md)
